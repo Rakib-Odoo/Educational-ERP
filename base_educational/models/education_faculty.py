@@ -9,7 +9,7 @@ class EducationFaculty(models.Model):
 
     name = fields.Char(string='First Name', required=True, help='Enter The First Name.')
     last_name = fields.Char(string='Last Name', required=True, help='Enter The Last Name.')
-    faculty_id = fields.Char(string='ID', readonly=1)
+    faculty_id = fields.Char(string='ID', readonly=True)
     image = fields.Binary(string='Image', attachment=True)
     email = fields.Char(string='Email', help='Enter the email for contact purpose.')
     phone = fields.Char(string='Phone', help='Enter the phone for contact purpose.')

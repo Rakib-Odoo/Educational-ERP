@@ -10,6 +10,7 @@
         'security/ir.model.access.csv',
         'views/main_menu.xml',
         'views/education_academic_views.xml',
+        'views/education_faculty.xml',
     ],
     'demo':[],
     'images':[],

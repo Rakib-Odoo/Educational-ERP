@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="education_faculty_form_view" model="ir.ui.view">
+        <field name="name">education.faculty.form</field>
+        <field name="model">education.faculty</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <field name="image" widget="image" class="oe_left oe_avatar"/>
+                    <div class="oe_title">
+                        <h1>
+                            <table>
+                                <tr>
+                                    <td style="padding-right:10px;">
+                                        <field name="name" required="1" palceholder="First Name"/>
+                                    </td>
+                                    <td style="padding-right:10px;">
+                                        <field name="last_name" required="1" palceholder="Last Name"/>
+                                    </td>
+                                </tr>
+                            </table>
+                        </h1>
+                    </div>
+                    <notebook>
+                        <page string="Faculty Details">
+                            <group>
+                                <group>
+                                    <field name="father_name"/>
+                                    <field name="mother_name"/>
+                                </group>
+                                <group>
+                                    <field name="gender"/>
+                                    <field name="date_of_birth"/>
+                                    <field name="blood_group"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Contact Details">
+                            <group>
+                                <group>
+                                    <field name="email"/>
+                                </group>
+                                <group>
+                                    <field name="phone"/>
+                                    <field name="mobile"/>
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <!-- Chatter -->
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="action_faculty" model="ir.actions.act_window">
+        <field name="name">Faculty</field>
+        <field name="res_model">education.faculty</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create Faculty
+            </p>
+        </field>
+    </record>
+
+
+    <menuitem id="menu_education_faculty"
+              name="Faculty"
+              parent="menu_education_admission"
+              action="action_faculty"
+              sequence="15"/>
+
+
+</odoo>

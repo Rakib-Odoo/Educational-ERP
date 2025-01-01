@@ -5,4 +5,9 @@
               name="Education"
               sequence="0"/>
 
+    <menuitem id="menu_education_admission"
+              name="Admission"
+              parent="menu_education_root"
+              sequence="5"/>
+
 </odoo>
