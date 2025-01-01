@@ -23,7 +23,7 @@
                 <sheet>
                     <group>
                         <group>
-                            <field name="name"/>
+                            <field name="name" placeholder="Name of Academic Year"/>
                             <field name="ay_start_date"/>
                             <field name="sequence"/>
                         </group>
