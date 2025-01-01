@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="education_academic_tree_view" model="ir.ui.view">
+        <field name="name">education.academic.tree</field>
+        <field name="model">education.academic</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="ay_code"/>
+                <field name="ay_start_date"/>
+                <field name="ay_end_date"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="education_academic_form_view" model="ir.ui.view">
+        <field name="name">education.academic.form</field>
+        <field name="model">education.academic</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="ay_start_date"/>
+                            <field name="sequence"/>
+                        </group>
+                        <group>
+                            <field name="ay_code"/>
+                            <field name="ay_end_date"/>
+                            <!--                            <field name="ay_code"/>-->
+                        </group>
+                        <footer>
+                            <group>
+                                <field name="description" placeholder="Enter the description"/>
+                            </group>
+                        </footer>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="action_education_academic" model="ir.actions.act_window">
+        <field name="name">Academic Year</field>
+        <field name="res_model">education.academic</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create Academic Year
+            </p>
+        </field>
+    </record>
+
+
+    <menuitem id="menu_education_main_menu"
+              name="Configuration"
+              parent="menu_education_root"
+              sequence="0"/>
+
+    <menuitem id="menu_action_education_academic"
+              parent="menu_education_main_menu"
+              action="action_education_academic"
+              sequence="2"/>
+
+
+</odoo>

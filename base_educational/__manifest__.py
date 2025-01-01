@@ -6,7 +6,11 @@
     'category': 'Educational',
     'author': 'Rakib Hasan',
     'depends':[],
-    'data':[],
+    'data':[
+        'security/ir.model.access.csv',
+        'views/main_menu.xml',
+        'views/education_academic_views.xml',
+    ],
     'demo':[],
     'images':[],
     'license': 'AGPL-3',
