@@ -28,7 +28,7 @@
                             <field name="sequence"/>
                         </group>
                         <group>
-                            <field name="ay_code"/>
+                            <field name="ay_code" placeholder="Code of Academic Year"/>
                             <field name="ay_end_date"/>
                             <!--                            <field name="ay_code"/>-->
                         </group>

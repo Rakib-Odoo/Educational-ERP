@@ -5,7 +5,7 @@
     'description':'Core module of Educational ERP.',
     'category': 'Educational',
     'author': 'Rakib Hasan',
-    'depends':[],
+    'depends':['mail'],
     'data':[
         'security/ir.model.access.csv',
         'views/main_menu.xml',
